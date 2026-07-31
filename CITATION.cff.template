@@ -2,11 +2,10 @@ cff-version: 1.2.0
 message: "Please cite this software and the associated methods publication."
 title: "Human-in-the-Loop Agent Workflow from CT/DICOM to FEBio"
 type: software
-version: "1.0.0-publication"
 authors:
-  - family-names: "AUTHOR_TO_COMPLETE"
-    given-names: "AUTHOR_TO_COMPLETE"
-repository-code: "GITHUB_URL_TO_COMPLETE"
-doi: "ZENODO_DOI_TO_COMPLETE"
+  - family-names: "MİS"
+    given-names: "Yavuz Kürşat"
+    affiliation: "Kocaeli Üniversitesi Tıp Fakültesi Anatomi Ana Bilim Dalı"
+    orcid: "https://orcid.org/0009-0007-7601-8628"
+repository-code: "https://github.com/yavuzkursatmis/dicom-febio-agent-pipeline"
 license: "Apache-2.0"
-
