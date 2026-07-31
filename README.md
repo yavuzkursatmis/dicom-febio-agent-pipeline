@@ -83,7 +83,10 @@ See:
 - `docs/CONFIGURATION.md`
 - `docs/WORKFLOW.md`
 
-Exact software/build versions remain release blockers until completed in `docs/SOFTWARE_VERSIONS.csv`.
+Exact verified software and build versions are recorded in
+`docs/SOFTWARE_VERSIONS.csv`. Exact Python dependencies are recorded in
+`requirements-core-lock.txt`; optional external-AI connectivity is isolated in
+`requirements-optional-ai-lock.txt`.
 
 ## Reproducibility
 
@@ -91,15 +94,27 @@ The repository preserves source-code provenance, recovered-source hashes, human-
 
 ## Citation and release
 
-The following fields will be completed after the GitHub repository and archival release are created:
+Software citation metadata is active in `CITATION.cff`.
 
-- repository URL;
-- immutable commit hash;
-- `v1.0.0-publication` release;
+The current software citation records:
+
+- Yavuz Kürşat MİS;
+- Kocaeli Üniversitesi Tıp Fakültesi Anatomi Ana Bilim Dalı;
+- ORCID: https://orcid.org/0009-0007-7601-8628;
+- the public source-code repository;
+- the Apache-2.0 license.
+
+The associated scientific article has a separately managed author list and may
+change independently of the software-author record.
+
+The following fields remain pending until the publication release:
+
+- software version;
+- release date;
+- immutable release commit hash;
+- `v1.0.0-publication` release URL;
 - Zenodo DOI;
-- citation author metadata.
-
-`CITATION.cff.template` is provided but must not be renamed until its placeholders are completed.
+- preferred citation for the associated scientific article.
 
 ## License
 

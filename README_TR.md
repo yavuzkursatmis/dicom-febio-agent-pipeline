@@ -81,7 +81,10 @@ Ayrıntılar için `DATA_AVAILABILITY.md`, `ETHICS_AND_PRIVACY.md` ve `SECURITY.
 - `docs/CONFIGURATION.md`
 - `docs/WORKFLOW_TR.md`
 
-Kesin yazılım/build sürümleri `docs/SOFTWARE_VERSIONS.csv` içinde tamamlanana kadar release blocker olarak kalacaktır.
+Doğrulanmış kesin yazılım ve build sürümleri
+`docs/SOFTWARE_VERSIONS.csv` dosyasında kayıtlıdır. Kesin Python bağımlılıkları
+`requirements-core-lock.txt` içinde tutulur; opsiyonel haricî AI bağlantısı
+`requirements-optional-ai-lock.txt` içinde ayrı olarak tanımlanır.
 
 ## Tekrar üretilebilirlik
 
@@ -89,15 +92,28 @@ Kaynak kod provenance'ı, kurtarılan kaynakların hash değerleri, insan deneti
 
 ## Atıf ve sürüm
 
-GitHub ve arşiv sürümü oluşturulduktan sonra şu alanlar tamamlanacaktır:
+Yazılım atıf metadata'sı repository kökündeki `CITATION.cff` dosyasında
+etkindir.
 
-- repository URL;
-- değişmez commit hash;
-- `v1.0.0-publication` release;
+Mevcut yazılım atıf kaydı şunları içerir:
+
+- Yavuz Kürşat MİS;
+- Kocaeli Üniversitesi Tıp Fakültesi Anatomi Ana Bilim Dalı;
+- ORCID: https://orcid.org/0009-0007-7601-8628;
+- açık kaynak kod repository adresi;
+- Apache-2.0 lisansı.
+
+İlişkili bilimsel makalenin yazar listesi ayrı olarak yönetilir ve yazılım
+yazarı kaydından bağımsız biçimde değişebilir.
+
+Aşağıdaki alanlar publication release aşamasına kadar beklemededir:
+
+- yazılım sürümü;
+- release tarihi;
+- değişmez release commit hash'i;
+- `v1.0.0-publication` release adresi;
 - Zenodo DOI;
-- atıf yazar bilgileri.
-
-`CITATION.cff.template` yer tutucular doldurulmadan `CITATION.cff` adına çevrilmemelidir.
+- ilişkili bilimsel makalenin tercih edilen atıf kaydı.
 
 ## Lisans
 
