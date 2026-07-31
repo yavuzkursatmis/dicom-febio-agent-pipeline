@@ -19,7 +19,7 @@ REQUIRED = [
     "ETHICS_AND_PRIVACY.md",
     "AI_USAGE_DISCLOSURE.md",
     "LICENSE",
-    "CITATION.cff.template",
+    "CITATION.cff",
     ".env.example",
     ".gitignore",
     "requirements-publication.in",
