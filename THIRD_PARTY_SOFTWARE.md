@@ -41,8 +41,9 @@ Exact validated Python package versions are listed in
 Optional external-AI connectivity is isolated in
 `requirements-optional-ai-lock.txt`.
 
-Python packages retain their respective upstream licenses. A package-level
-license inventory remains required before the `v1.0.0-publication` release.
+Python packages retain their respective upstream licenses. The exact-version package-level license inventory is recorded in
+`docs/PYTHON_DEPENDENCY_LICENSES.md`. Transitive dependencies and bundled
+license files remain subject to release-time verification.
 
 ## TotalSegmentator licensing note
 
