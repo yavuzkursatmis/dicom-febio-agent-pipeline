@@ -5,9 +5,7 @@
 
 ## Amaç
 
-Bu repository, hastane arşivinden alınan retrospektif CT/DICOM verisini sonlu elemanlar tabanlı biyomekanik modele taşıyan modüler otonom/yarı-otonom iş akışının yayına esas kaynak kodunu ve teknik dokümantasyonunu içerir.
-
-Doğrulanan teknik vaka, T1 vertebranın aksiyel kompresyon analizidir.
+Bu repository, retrospektif hastane arşivi CT/DICOM verilerini sonlu elemanlar biyomekanik modeline dönüştüren modüler, insan denetimli bir ajan iş akışının yayın kapsamındaki kaynak kodunu ve teknik dokümantasyonunu içerir. Doğrulanan teknik vaka, T1 vertebranın aksiyel kompresyon analizidir.
 
 ## Doğrulanmış iş akışı sınırı
 

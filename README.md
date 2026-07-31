@@ -5,7 +5,7 @@
 
 ## Purpose
 
-This repository contains the publication-scope source code and technical documentation for a modular autonomous/semi-autonomous workflow that transforms retrospective hospital-archive CT/DICOM data into a finite-element biomechanics model.
+This repository contains the publication-scope source code and technical documentation for a modular human-in-the-loop agent workflow that transforms retrospective hospital-archive CT/DICOM data into a finite-element biomechanics model.
 
 The validated technical case concerns T1 vertebral axial compression.
 
