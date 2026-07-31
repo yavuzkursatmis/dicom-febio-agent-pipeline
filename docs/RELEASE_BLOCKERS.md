@@ -29,11 +29,25 @@ declared complete until the remaining blocking items are resolved.
 - exact DICOM de-identification or anonymization procedure;
 - data-retention and access-control description.
 
-## Blocking third-party review
+## Resolved third-party review
 
-- confirm licenses of Python dependencies and external tools;
-- confirm that no third-party binary or restricted dataset is redistributed;
-- document any third-party source code incorporated into this repository.
+- external scientific software licenses and distribution boundaries are
+  documented in `THIRD_PARTY_SOFTWARE.md`;
+- exact-version direct Python dependency licenses are documented in
+  `docs/PYTHON_DEPENDENCY_LICENSES.md`;
+- repository audits found no redistributed third-party executable, installer,
+  clinical dataset, patient-derived binary artifact, or model weight;
+- external software is obtained and installed independently by users.
+
+## Remaining release-time third-party checks
+
+- verify transitive dependency versions and bundled license files;
+- recheck package metadata against the release environment;
+- confirm task-specific and model-weight-specific TotalSegmentator terms;
+- verify whether any third-party source-code fragments require attribution or
+  inclusion in a `NOTICE` file;
+- repeat the forbidden-binary, restricted-data, and secret scan against the
+  immutable release commit.
 
 ## Resolved security item
 
