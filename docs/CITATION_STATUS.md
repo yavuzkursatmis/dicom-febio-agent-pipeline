@@ -1,16 +1,20 @@
 # Citation Metadata Status
 
-`CITATION.cff` is intentionally not active yet.
+`CITATION.cff` is active in the repository root.
 
-The author/contributor names are not fixed and may change before the
-publication release. The repository therefore retains
-`CITATION.cff.template` with explicit placeholders.
+The software author metadata currently records:
 
-Before `v1.0.0-publication`:
+- Yavuz Kürşat MİS
+- Kocaeli Üniversitesi Tıp Fakültesi Anatomi Ana Bilim Dalı
+- ORCID: https://orcid.org/0009-0007-7601-8628
 
-1. confirm the final software authors and contributors;
-2. complete repository URL and release metadata;
-3. select the correct preferred citation;
-4. complete the Zenodo DOI after archival release;
-5. validate the file with a CFF validator;
-6. rename `CITATION.cff.template` to `CITATION.cff`.
+This record applies to the software repository. The author list of the
+associated scientific article is managed separately and may change.
+
+The following citation fields remain pending until the publication release:
+
+- software version;
+- release date;
+- GitHub release URL;
+- Zenodo DOI;
+- preferred citation for the associated article.
