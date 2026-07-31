@@ -1,0 +1,62 @@
+﻿{
+  "active_literature_search_required": true,
+  "allow_test_defaults_for_final_analysis": false,
+  "default_material_model_policy": "literature_required",
+
+  "target_policy": {
+    "target_source": "Agent-04 Target Understanding output",
+    "allow_dynamic_anatomical_target": true,
+    "do_not_restrict_to_predefined_vertebra_list": true,
+    "initial_validation_domain": "vertebra_test_case_only",
+    "note": "The first validated development case uses vertebra data, but the system is not limited to vertebra analysis."
+  },
+
+  "supported_material_domains_initial": [
+    "bone",
+    "cartilage",
+    "tendon",
+    "ligament",
+    "muscle",
+    "soft_tissue",
+    "implant_material",
+    "unknown_requires_review"
+  ],
+
+  "literature_search_policy": {
+    "enabled": true,
+    "minimum_records_for_pass": 2,
+    "minimum_records_for_review": 1,
+    "sources": [
+      "PubMed",
+      "Semantic Scholar",
+      "Crossref"
+    ],
+    "query_templates": [
+      "{target} elastic modulus biomechanics",
+      "{target} Young modulus Poisson ratio finite element",
+      "{target} material properties biomechanical model",
+      "{target} tissue mechanical properties",
+      "{target} finite element material properties"
+    ]
+  },
+
+  "material_model_candidates": [
+    "linear_elastic_isotropic",
+    "hyperelastic",
+    "viscoelastic",
+    "orthotropic",
+    "poroelastic",
+    "density_based_heterogeneous",
+    "unknown_requires_review"
+  ],
+
+  "review_policy": {
+    "human_review_required_if_literature_range_wide": true,
+    "human_review_required_if_less_than_minimum_records": true,
+    "human_review_required_if_material_domain_unknown": true,
+    "human_review_required_if_target_outside_validated_pipeline_domain": true,
+    "reason": "Material properties vary by tissue type, anatomical site, age, pathology, imaging modality, segmentation quality, and modeling assumption."
+  },
+
+  "clinical_use": false
+}

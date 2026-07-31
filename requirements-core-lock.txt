@@ -1,0 +1,16 @@
+﻿# Exact Python dependencies from the validated publication environment.
+# External software versions are recorded in docs/SOFTWARE_VERSIONS.csv.
+
+TotalSegmentator==2.15.0
+SimpleITK==2.5.5
+pydicom==3.0.2
+meshio==5.3.5
+numpy==2.4.6
+pydantic==2.13.4
+langchain-core==1.4.9
+langgraph==1.2.9
+scikit-image==0.26.0
+trimesh==4.12.2
+pypdf==6.14.2
+requests==2.34.2
+python-dotenv==1.2.2

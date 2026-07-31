@@ -1,0 +1,20 @@
+﻿{
+  "default_segmentation_mode": "AUTO_SEGMENTATION",
+  "default_segmentation_tool": "TotalSegmentator",
+  "supported_targets": [
+    "L1 vertebra",
+    "L2 vertebra",
+    "L3 vertebra",
+    "L4 vertebra",
+    "L5 vertebra"
+  ],
+  "anisotropy_warning_threshold": 4.0,
+  "resampling_policy": {
+    "enabled": true,
+    "target_spacing_mm": [0.75, 0.75, 0.75],
+    "interpolator_for_image": "linear",
+    "interpolator_for_mask": "nearest"
+  },
+  "clinical_use": false,
+  "human_review_required_after_segmentation": true
+}

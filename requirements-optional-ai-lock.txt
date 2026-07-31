@@ -1,0 +1,4 @@
+﻿# Optional external-AI dependency.
+# Not required for the primary deterministic publication claim.
+
+google-genai==2.11.0

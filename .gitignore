@@ -1,0 +1,112 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Medical data
+cases/
+user_data/
+*.dcm
+*.dicom
+*.nii
+*.nii.gz
+*.nrrd
+*.mha
+*.mhd
+
+# Geometry, mesh, solver and large outputs
+*.stl
+*.obj
+*.ply
+*.vtk
+*.vtu
+*.msh
+*.feb
+*.xplt
+*.log
+
+# Runtime and temporary files
+runtime_entries/
+outputs/
+temp/
+tmp/
+*.bak
+*.tmp
+*.zip
+*.7z
+*.rar
+
+# IDE and operating system
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local publication audit
+_publication_audit/
+
+# BEGIN PUBLICATION SAFETY RULES
+# Local audit evidence and generated archives
+_publication_audit/
+*.zip
+
+# Python and local environments
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Clinical and patient-derived data
+*.dcm
+*.dicom
+*.nii
+*.nii.gz
+*.nrrd
+*.mha
+*.mhd
+cases/
+user_data/
+
+# Generated geometry, meshes, solver inputs and outputs
+*.stl
+*.obj
+*.ply
+*.vtk
+*.vtu
+*.msh
+*.feb
+*.xplt
+outputs/
+results/
+
+# External binaries
+*.exe
+*.dll
+# END PUBLICATION SAFETY RULES

@@ -1,0 +1,274 @@
+{
+  "created_at": "2026-07-16T16:22:29",
+  "case_id": "real_dicom_check_001_anon_T1",
+  "integration_stage": "LANGCHAIN_LANGGRAPH_INTEGRATION_PREP",
+  "current_pipeline_status": "FULL_PIPELINE_AUDIT_LIMITED_PASS",
+  "next_stage": "LANGCHAIN_TOOL_WRAPPERS_AND_LANGGRAPH_NODES",
+  "integration_principle": {
+    "do_not_rewrite_working_tools": true,
+    "wrap_existing_deterministic_tools": true,
+    "preserve_human_review_gates": true,
+    "preserve_scientific_safety_limits": true,
+    "streamlit_should_call_langgraph_not_individual_scripts": true
+  },
+  "agents": [
+    {
+      "agent_id": "AGENT_01_DATA_INTAKE",
+      "role": "Input detection and case initialization",
+      "langgraph_node_required": true,
+      "human_review_gate": false,
+      "current_status": "IMPLEMENTED_EARLIER"
+    },
+    {
+      "agent_id": "AGENT_02_DICOM_SAFETY",
+      "role": "DICOM safety and PHI risk screening",
+      "langgraph_node_required": true,
+      "human_review_gate": false,
+      "current_status": "IMPLEMENTED_EARLIER"
+    },
+    {
+      "agent_id": "AGENT_03_IMAGE_QUALITY",
+      "role": "Image quality and spacing checks",
+      "langgraph_node_required": true,
+      "human_review_gate": false,
+      "current_status": "IMPLEMENTED_EARLIER"
+    },
+    {
+      "agent_id": "AGENT_04_TARGET_UNDERSTANDING",
+      "role": "Target/test understanding",
+      "langgraph_node_required": true,
+      "human_review_gate": false,
+      "current_status": "IMPLEMENTED_EARLIER"
+    },
+    {
+      "agent_id": "AGENT_05_SEGMENTATION",
+      "role": "Segmentation/preprocessing",
+      "langgraph_node_required": true,
+      "human_review_gate": false,
+      "current_status": "IMPLEMENTED_EARLIER"
+    },
+    {
+      "agent_id": "AGENT_06_SEGMENTATION_VALIDATION",
+      "role": "Segmentation validation",
+      "langgraph_node_required": true,
+      "human_review_gate": true,
+      "current_status": "IMPLEMENTED_EARLIER"
+    },
+    {
+      "agent_id": "AGENT_07_MATERIAL_SELECTION",
+      "role": "Literature-backed material law selection and validation",
+      "langgraph_node_required": true,
+      "human_review_gate": true,
+      "current_status": "IMPLEMENTED_EARLIER"
+    },
+    {
+      "agent_id": "AGENT_08_GEOMETRY_PREPARATION",
+      "role": "Mask to watertight STL geometry",
+      "run_script": "agent_system/run_agent08_geometry_preparation.py",
+      "result_json": "C:\\dicom_febio_agent_research\\cases\\real_dicom_check_001_anon_T1\\09_geometry_mesh_preparation\\GEOMETRY_PREPARATION_RESULT.json",
+      "expected_pass_status": "GEOMETRY_PREPARATION_PASS",
+      "langgraph_node_required": true,
+      "human_review_gate": false,
+      "run_script_status": {
+        "path": "C:\\dicom_febio_agent_research\\agent_system\\run_agent08_geometry_preparation.py",
+        "exists": true,
+        "size_bytes": 1996
+      },
+      "result_json_status": {
+        "path": "C:\\dicom_febio_agent_research\\cases\\real_dicom_check_001_anon_T1\\09_geometry_mesh_preparation\\GEOMETRY_PREPARATION_RESULT.json",
+        "exists": true,
+        "size_bytes": 1256
+      }
+    },
+    {
+      "agent_id": "AGENT_09_VOLUME_MESH_GENERATION",
+      "role": "STL to tetrahedral volume mesh",
+      "run_script": "agent_system/run_agent09_volume_mesh_generation.py",
+      "result_json": "C:\\dicom_febio_agent_research\\cases\\real_dicom_check_001_anon_T1\\10_volume_mesh_generation\\VOLUME_MESH_GENERATION_RESULT.json",
+      "expected_pass_status": "VOLUME_MESH_GENERATION_PASS",
+      "langgraph_node_required": true,
+      "human_review_gate": false,
+      "run_script_status": {
+        "path": "C:\\dicom_febio_agent_research\\agent_system\\run_agent09_volume_mesh_generation.py",
+        "exists": true,
+        "size_bytes": 2619
+      },
+      "result_json_status": {
+        "path": "C:\\dicom_febio_agent_research\\cases\\real_dicom_check_001_anon_T1\\10_volume_mesh_generation\\VOLUME_MESH_GENERATION_RESULT.json",
+        "exists": true,
+        "size_bytes": 1856
+      }
+    },
+    {
+      "agent_id": "AGENT_10_FEBIO_MODEL_GENERATION",
+      "role": "Volume mesh and HU-density material law to FEBio base model",
+      "run_script": "agent_system/run_agent10_febio_model_generation.py",
+      "result_json": "C:\\dicom_febio_agent_research\\cases\\real_dicom_check_001_anon_T1\\11_febio_model_generation\\FEBIO_MODEL_GENERATION_RESULT.json",
+      "expected_pass_status": "FEBIO_MODEL_GENERATION_PASS",
+      "langgraph_node_required": true,
+      "human_review_gate": false,
+      "run_script_status": {
+        "path": "C:\\dicom_febio_agent_research\\agent_system\\run_agent10_febio_model_generation.py",
+        "exists": true,
+        "size_bytes": 2799
+      },
+      "result_json_status": {
+        "path": "C:\\dicom_febio_agent_research\\cases\\real_dicom_check_001_anon_T1\\11_febio_model_generation\\FEBIO_MODEL_GENERATION_RESULT.json",
+        "exists": true,
+        "size_bytes": 1884
+      }
+    },
+    {
+      "agent_id": "AGENT_11_BOUNDARY_LOAD_CONFIGURATION",
+      "role": "Boundary/load candidate creation",
+      "run_script": "agent_system/run_agent11_boundary_load_configuration.py",
+      "result_json": "C:\\dicom_febio_agent_research\\cases\\real_dicom_check_001_anon_T1\\12_boundary_load_configuration\\BOUNDARY_LOAD_CONFIGURATION_RESULT.json",
+      "expected_pass_status": "BOUNDARY_LOAD_CONFIGURATION_REVIEW_REQUIRED",
+      "langgraph_node_required": true,
+      "human_review_gate": true,
+      "run_script_status": {
+        "path": "C:\\dicom_febio_agent_research\\agent_system\\run_agent11_boundary_load_configuration.py",
+        "exists": true,
+        "size_bytes": 2968
+      },
+      "result_json_status": {
+        "path": "C:\\dicom_febio_agent_research\\cases\\real_dicom_check_001_anon_T1\\12_boundary_load_configuration\\BOUNDARY_LOAD_CONFIGURATION_RESULT.json",
+        "exists": true,
+        "size_bytes": 1779
+      }
+    },
+    {
+      "agent_id": "AGENT_11_REVIEW_VALIDATION",
+      "role": "Boundary/load human review validation",
+      "run_script": "agent_system/validate_agent11_boundary_load_review.py",
+      "result_json": "C:\\dicom_febio_agent_research\\cases\\real_dicom_check_001_anon_T1\\12_boundary_load_configuration\\BOUNDARY_LOAD_REVIEW_VALIDATION_RESULT.json",
+      "expected_pass_status": "BOUNDARY_LOAD_REVIEW_APPROVED",
+      "langgraph_node_required": true,
+      "human_review_gate": true,
+      "run_script_status": {
+        "path": "C:\\dicom_febio_agent_research\\agent_system\\validate_agent11_boundary_load_review.py",
+        "exists": true,
+        "size_bytes": 5768
+      },
+      "result_json_status": {
+        "path": "C:\\dicom_febio_agent_research\\cases\\real_dicom_check_001_anon_T1\\12_boundary_load_configuration\\BOUNDARY_LOAD_REVIEW_VALIDATION_RESULT.json",
+        "exists": true,
+        "size_bytes": 1564
+      }
+    },
+    {
+      "agent_id": "AGENT_12_FEBIO_SOLVER_EXECUTION",
+      "role": "FEBio solver execution",
+      "run_script": "agent_system/run_agent12_febio_solver_execution.py",
+      "result_json": "C:\\dicom_febio_agent_research\\cases\\real_dicom_check_001_anon_T1\\13_solver_execution\\FEBIO_SOLVER_EXECUTION_RESULT.json",
+      "expected_pass_status": "SOLVER_EXECUTION_PASS",
+      "langgraph_node_required": true,
+      "human_review_gate": false,
+      "run_script_status": {
+        "path": "C:\\dicom_febio_agent_research\\agent_system\\run_agent12_febio_solver_execution.py",
+        "exists": true,
+        "size_bytes": 2546
+      },
+      "result_json_status": {
+        "path": "C:\\dicom_febio_agent_research\\cases\\real_dicom_check_001_anon_T1\\13_solver_execution\\FEBIO_SOLVER_EXECUTION_RESULT.json",
+        "exists": true,
+        "size_bytes": 2763
+      }
+    },
+    {
+      "agent_id": "AGENT_13_SOLVER_RESULT_VALIDATION",
+      "role": "Solver result validation",
+      "run_script": "agent_system/run_agent13_solver_result_validation.py",
+      "result_json": "C:\\dicom_febio_agent_research\\cases\\real_dicom_check_001_anon_T1\\14_solver_result_validation\\SOLVER_RESULT_VALIDATION_RESULT.json",
+      "expected_pass_status": "SOLVER_RESULT_VALIDATION_PASS",
+      "langgraph_node_required": true,
+      "human_review_gate": false,
+      "run_script_status": {
+        "path": "C:\\dicom_febio_agent_research\\agent_system\\run_agent13_solver_result_validation.py",
+        "exists": true,
+        "size_bytes": 2111
+      },
+      "result_json_status": {
+        "path": "C:\\dicom_febio_agent_research\\cases\\real_dicom_check_001_anon_T1\\14_solver_result_validation\\SOLVER_RESULT_VALIDATION_RESULT.json",
+        "exists": true,
+        "size_bytes": 3364
+      }
+    },
+    {
+      "agent_id": "AGENT_14_RESULT_EXTRACTION",
+      "role": "Result extraction and solver-log metrics",
+      "run_script": "agent_system/run_agent14_result_extraction.py",
+      "result_json": "C:\\dicom_febio_agent_research\\cases\\real_dicom_check_001_anon_T1\\15_result_extraction\\RESULT_EXTRACTION_RESULT.json",
+      "expected_pass_status": "RESULT_EXTRACTION_PASS",
+      "langgraph_node_required": true,
+      "human_review_gate": false,
+      "run_script_status": {
+        "path": "C:\\dicom_febio_agent_research\\agent_system\\run_agent14_result_extraction.py",
+        "exists": true,
+        "size_bytes": 2089
+      },
+      "result_json_status": {
+        "path": "C:\\dicom_febio_agent_research\\cases\\real_dicom_check_001_anon_T1\\15_result_extraction\\RESULT_EXTRACTION_RESULT.json",
+        "exists": true,
+        "size_bytes": 4685
+      }
+    },
+    {
+      "agent_id": "AGENT_15_RESULT_INTERPRETATION_PRECHECK",
+      "role": "Interpretation safety precheck",
+      "run_script": "agent_system/run_agent15_result_interpretation_precheck.py",
+      "result_json": "C:\\dicom_febio_agent_research\\cases\\real_dicom_check_001_anon_T1\\16_result_interpretation_precheck\\RESULT_INTERPRETATION_PRECHECK_RESULT.json",
+      "expected_pass_status": "INTERPRETATION_PRECHECK_LIMITED_PASS",
+      "langgraph_node_required": true,
+      "human_review_gate": false,
+      "run_script_status": {
+        "path": "C:\\dicom_febio_agent_research\\agent_system\\run_agent15_result_interpretation_precheck.py",
+        "exists": true,
+        "size_bytes": 2169
+      },
+      "result_json_status": {
+        "path": "C:\\dicom_febio_agent_research\\cases\\real_dicom_check_001_anon_T1\\16_result_interpretation_precheck\\RESULT_INTERPRETATION_PRECHECK_RESULT.json",
+        "exists": true,
+        "size_bytes": 2136
+      }
+    },
+    {
+      "agent_id": "AGENT_16_ACADEMIC_REPORT_DRAFT",
+      "role": "Academic report draft",
+      "run_script": "agent_system/run_agent16_academic_report_draft.py",
+      "result_json": "C:\\dicom_febio_agent_research\\cases\\real_dicom_check_001_anon_T1\\17_academic_report_draft\\ACADEMIC_REPORT_DRAFT_RESULT.json",
+      "expected_pass_status": "ACADEMIC_REPORT_DRAFT_PASS",
+      "langgraph_node_required": true,
+      "human_review_gate": false,
+      "run_script_status": {
+        "path": "C:\\dicom_febio_agent_research\\agent_system\\run_agent16_academic_report_draft.py",
+        "exists": true,
+        "size_bytes": 2082
+      },
+      "result_json_status": {
+        "path": "C:\\dicom_febio_agent_research\\cases\\real_dicom_check_001_anon_T1\\17_academic_report_draft\\ACADEMIC_REPORT_DRAFT_RESULT.json",
+        "exists": true,
+        "size_bytes": 2898
+      }
+    },
+    {
+      "agent_id": "AGENT_17_FULL_PIPELINE_AUDIT",
+      "role": "Full scientific and workflow audit",
+      "run_script": "agent_system/run_agent17_full_pipeline_audit.py",
+      "result_json": "C:\\dicom_febio_agent_research\\cases\\real_dicom_check_001_anon_T1\\18_full_pipeline_audit\\FULL_PIPELINE_AUDIT_RESULT.json",
+      "expected_pass_status": "FULL_PIPELINE_AUDIT_LIMITED_PASS",
+      "langgraph_node_required": true,
+      "human_review_gate": false,
+      "run_script_status": {
+        "path": "C:\\dicom_febio_agent_research\\agent_system\\run_agent17_full_pipeline_audit.py",
+        "exists": true,
+        "size_bytes": 1386
+      },
+      "result_json_status": {
+        "path": "C:\\dicom_febio_agent_research\\cases\\real_dicom_check_001_anon_T1\\18_full_pipeline_audit\\FULL_PIPELINE_AUDIT_RESULT.json",
+        "exists": true,
+        "size_bytes": 3933
+      }
+    }
+  ]
+}

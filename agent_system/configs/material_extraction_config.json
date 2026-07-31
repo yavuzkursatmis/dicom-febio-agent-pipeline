@@ -1,0 +1,233 @@
+﻿{
+    "manual_material_value_entry_allowed":  false,
+    "agent_derived_candidate_required":  true,
+    "geometry_requires_approved_candidate_id":  true,
+    "clinical_use":  false,
+    "supported_material_domains":  [
+                                       "bone",
+                                       "cartilage",
+                                       "tendon",
+                                       "ligament",
+                                       "muscle",
+                                       "soft_tissue",
+                                       "implant_material",
+                                       "unknown_requires_review"
+                                   ],
+    "material_model_families":  {
+                                    "linear_elastic_isotropic":  {
+                                                                     "required_properties":  [
+                                                                                                 "elastic_modulus",
+                                                                                                 "poisson_ratio"
+                                                                                             ],
+                                                                     "accepted_property_terms":  {
+                                                                                                     "elastic_modulus":  [
+                                                                                                                             "Young\u0027s modulus",
+                                                                                                                             "Young modulus",
+                                                                                                                             "elastic modulus",
+                                                                                                                             "tensile modulus",
+                                                                                                                             "compressive modulus",
+                                                                                                                             "modulus of elasticity"
+                                                                                                                         ],
+                                                                                                     "poisson_ratio":  [
+                                                                                                                           "Poisson\u0027s ratio",
+                                                                                                                           "Poisson ratio",
+                                                                                                                           "nu",
+                                                                                                                           "ν"
+                                                                                                                       ]
+                                                                                                 },
+                                                                     "accepted_units":  [
+                                                                                            "Pa",
+                                                                                            "kPa",
+                                                                                            "MPa",
+                                                                                            "GPa"
+                                                                                        ]
+                                                                 },
+                                    "orthotropic_linear_elastic":  {
+                                                                       "required_properties":  [
+                                                                                                   "E1",
+                                                                                                   "E2",
+                                                                                                   "E3",
+                                                                                                   "nu12",
+                                                                                                   "nu23",
+                                                                                                   "nu13",
+                                                                                                   "G12",
+                                                                                                   "G23",
+                                                                                                   "G13"
+                                                                                               ]
+                                                                   },
+                                    "hyperelastic":  {
+                                                         "accepted_models":  [
+                                                                                 "Neo-Hookean",
+                                                                                 "Mooney-Rivlin",
+                                                                                 "Ogden",
+                                                                                 "Yeoh"
+                                                                             ],
+                                                         "accepted_property_terms":  [
+                                                                                         "C10",
+                                                                                         "C01",
+                                                                                         "C20",
+                                                                                         "C30",
+                                                                                         "mu",
+                                                                                         "alpha",
+                                                                                         "D1",
+                                                                                         "Ogden parameter",
+                                                                                         "Mooney-Rivlin parameter"
+                                                                                     ]
+                                                     },
+                                    "viscoelastic":  {
+                                                         "accepted_property_terms":  [
+                                                                                         "relaxation modulus",
+                                                                                         "Prony series",
+                                                                                         "time constant",
+                                                                                         "creep",
+                                                                                         "stress relaxation"
+                                                                                     ]
+                                                     },
+                                    "density_based_heterogeneous":  {
+                                                                        "accepted_property_terms":  [
+                                                                                                        "density",
+                                                                                                        "apparent density",
+                                                                                                        "ash density",
+                                                                                                        "HU",
+                                                                                                        "Hounsfield",
+                                                                                                        "density-modulus",
+                                                                                                        "HU-density",
+                                                                                                        "density-elastic modulus"
+                                                                                                    ]
+                                                                    }
+                                },
+    "domain_keyword_profiles":  {
+                                    "bone":  [
+                                                 "bone",
+                                                 "cortical bone",
+                                                 "cancellous bone",
+                                                 "trabecular bone",
+                                                 "vertebral bone",
+                                                 "femur",
+                                                 "tibia",
+                                                 "humerus",
+                                                 "mandible",
+                                                 "pelvis"
+                                             ],
+                                    "cartilage":  [
+                                                      "cartilage",
+                                                      "articular cartilage",
+                                                      "meniscus",
+                                                      "compressive modulus",
+                                                      "aggregate modulus",
+                                                      "biphasic"
+                                                  ],
+                                    "tendon":  [
+                                                   "tendon",
+                                                   "Achilles tendon",
+                                                   "patellar tendon",
+                                                   "tensile modulus",
+                                                   "viscoelastic"
+                                               ],
+                                    "ligament":  [
+                                                     "ligament",
+                                                     "ACL",
+                                                     "PCL",
+                                                     "MCL",
+                                                     "LCL",
+                                                     "tensile modulus",
+                                                     "toe region"
+                                                 ],
+                                    "muscle":  [
+                                                   "muscle",
+                                                   "skeletal muscle",
+                                                   "passive muscle",
+                                                   "hyperelastic",
+                                                   "Ogden",
+                                                   "Mooney-Rivlin"
+                                               ],
+                                    "soft_tissue":  [
+                                                        "soft tissue",
+                                                        "adipose",
+                                                        "skin",
+                                                        "organ tissue",
+                                                        "shear modulus",
+                                                        "hyperelastic"
+                                                    ],
+                                    "implant_material":  [
+                                                             "titanium",
+                                                             "Ti6Al4V",
+                                                             "tantalum",
+                                                             "trabecular metal",
+                                                             "implant material",
+                                                             "elastic modulus",
+                                                             "yield strength"
+                                                         ]
+                                },
+    "candidate_review_policy":  {
+                                    "reviewer_can_only_approve_agent_candidate":  true,
+                                    "manual_numeric_override_allowed":  false,
+                                    "minimum_traceable_sources":  1,
+                                    "required_traceability":  [
+                                                                  "source_title",
+                                                                  "source_url_or_doi",
+                                                                  "context_excerpt"
+                                                              ]
+                                },
+    "domain_model_policy":  {
+                                "bone":  {
+                                             "preferred_model_families":  [
+                                                                              "linear_elastic_isotropic",
+                                                                              "orthotropic_linear_elastic",
+                                                                              "density_based_heterogeneous"
+                                                                          ],
+                                             "allow_hyperelastic_without_explicit_model_term":  false
+                                         },
+                                "cartilage":  {
+                                                  "preferred_model_families":  [
+                                                                                   "linear_elastic_isotropic",
+                                                                                   "hyperelastic",
+                                                                                   "viscoelastic"
+                                                                               ],
+                                                  "allow_hyperelastic_without_explicit_model_term":  false
+                                              },
+                                "tendon":  {
+                                               "preferred_model_families":  [
+                                                                                "linear_elastic_isotropic",
+                                                                                "viscoelastic",
+                                                                                "hyperelastic"
+                                                                            ],
+                                               "allow_hyperelastic_without_explicit_model_term":  false
+                                           },
+                                "ligament":  {
+                                                 "preferred_model_families":  [
+                                                                                  "linear_elastic_isotropic",
+                                                                                  "viscoelastic",
+                                                                                  "hyperelastic"
+                                                                              ],
+                                                 "allow_hyperelastic_without_explicit_model_term":  false
+                                             },
+                                "muscle":  {
+                                               "preferred_model_families":  [
+                                                                                "hyperelastic",
+                                                                                "viscoelastic"
+                                                                            ],
+                                               "allow_hyperelastic_without_explicit_model_term":  false
+                                           },
+                                "soft_tissue":  {
+                                                    "preferred_model_families":  [
+                                                                                     "hyperelastic",
+                                                                                     "viscoelastic",
+                                                                                     "linear_elastic_isotropic"
+                                                                                 ],
+                                                    "allow_hyperelastic_without_explicit_model_term":  false
+                                                },
+                                "implant_material":  {
+                                                         "preferred_model_families":  [
+                                                                                          "linear_elastic_isotropic"
+                                                                                      ],
+                                                         "allow_hyperelastic_without_explicit_model_term":  false
+                                                     },
+                                "unknown_requires_review":  {
+                                                                "preferred_model_families":  [
+
+                                                                                             ],
+                                                                "allow_hyperelastic_without_explicit_model_term":  false
+                                                            }
+                            }
+}

@@ -1,0 +1,46 @@
+﻿{
+  "template_name": "source_supported_material_parameter_input",
+  "purpose": "Human-reviewed, source-supported material parameter entry before FEBio geometry/model generation.",
+  "clinical_use": false,
+
+  "required_fields": {
+    "case_id": "",
+    "anatomical_target": "",
+    "material_domain": "",
+    "material_model": "linear_elastic_isotropic",
+    "tissue_assumption": "",
+
+    "elastic_modulus_MPa": null,
+    "poisson_ratio": null,
+    "density_kg_m3": null,
+
+    "source_supported": false,
+    "selected_value_rationale": "",
+    "uncertainty_level": "high",
+
+    "sources": [
+      {
+        "title": "",
+        "authors": "",
+        "year": "",
+        "doi": "",
+        "url": "",
+        "parameter_supported": "",
+        "reported_value_or_range": "",
+        "notes": ""
+      }
+    ],
+
+    "reviewer_decision": "PENDING",
+    "approved_for_geometry_agent": false,
+    "approved_next_agent": "USER_ACTION_REQUIRED"
+  },
+
+  "rules": [
+    "Do not enter unsupported test/default values.",
+    "At least elastic_modulus_MPa and poisson_ratio must be source-supported before GEOMETRY_AGENT.",
+    "Every selected parameter must include a DOI, PubMed link, journal URL, or traceable reference.",
+    "If sources disagree widely, uncertainty_level must remain medium or high.",
+    "This is not clinical approval."
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "created_at": "2026-07-20T16:09:43",
+  "agent_count": 12,
+  "agent_sequence": [
+    "AGENT_08_GEOMETRY_PREPARATION",
+    "AGENT_09_VOLUME_MESH_GENERATION",
+    "AGENT_10_FEBIO_MODEL_GENERATION",
+    "AGENT_11_BOUNDARY_LOAD_CONFIGURATION",
+    "AGENT_11_REVIEW_VALIDATION",
+    "AGENT_12_FEBIO_SOLVER_EXECUTION",
+    "AGENT_13_SOLVER_RESULT_VALIDATION",
+    "AGENT_14_RESULT_EXTRACTION",
+    "AGENT_15_RESULT_INTERPRETATION_PRECHECK",
+    "AGENT_16_ACADEMIC_REPORT_DRAFT",
+    "AGENT_17_FULL_PIPELINE_AUDIT",
+    "CLEAN_T1_UPSTREAM_EVIDENCE_AUDIT"
+  ],
+  "tool_sequence": [
+    "agent08_geometry_preparation",
+    "agent09_volume_mesh_generation",
+    "agent10_febio_model_generation",
+    "agent11_boundary_load_configuration",
+    "agent11_review_validation",
+    "agent12_febio_solver_execution",
+    "agent13_solver_result_validation",
+    "agent14_result_extraction",
+    "agent15_result_interpretation_precheck",
+    "agent16_academic_report_draft",
+    "agent17_full_pipeline_audit",
+    "clean_t1_upstream_evidence_audit"
+  ],
+  "entry_point": "AGENT_08_GEOMETRY_PREPARATION",
+  "final_node": "GRAPH_FINAL",
+  "conditional_blocker_routing": true,
+  "clean_t1_upstream_evidence_audit_node": true,
+  "quantitative_field_interpretation_default": false,
+  "clinical_interpretation_default": false
+}

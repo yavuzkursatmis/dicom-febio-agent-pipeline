@@ -1,0 +1,149 @@
+{
+  "case_id": "real_dicom_check_001_anon_T1",
+  "run_live": false,
+  "timeout_seconds": 1800,
+  "current_agent": "GRAPH_FINAL",
+  "completed_agents": [
+    "AGENT_08_GEOMETRY_PREPARATION",
+    "AGENT_09_VOLUME_MESH_GENERATION",
+    "AGENT_10_FEBIO_MODEL_GENERATION",
+    "AGENT_11_BOUNDARY_LOAD_CONFIGURATION",
+    "AGENT_11_REVIEW_VALIDATION",
+    "AGENT_12_FEBIO_SOLVER_EXECUTION",
+    "AGENT_13_SOLVER_RESULT_VALIDATION",
+    "AGENT_14_RESULT_EXTRACTION",
+    "AGENT_15_RESULT_INTERPRETATION_PRECHECK",
+    "AGENT_16_ACADEMIC_REPORT_DRAFT",
+    "AGENT_17_FULL_PIPELINE_AUDIT",
+    "CLEAN_T1_UPSTREAM_EVIDENCE_AUDIT"
+  ],
+  "agent_results": {
+    "AGENT_08_GEOMETRY_PREPARATION": {
+      "success": true,
+      "dry_run": true,
+      "agent_id": "AGENT_08_GEOMETRY_PREPARATION",
+      "tool_name": "agent08_geometry_preparation",
+      "case_id": "real_dicom_check_001_anon_T1",
+      "message": "Dry-run mode: tool was not executed.",
+      "parsed_stdout": {},
+      "blockers": []
+    },
+    "AGENT_09_VOLUME_MESH_GENERATION": {
+      "success": true,
+      "dry_run": true,
+      "agent_id": "AGENT_09_VOLUME_MESH_GENERATION",
+      "tool_name": "agent09_volume_mesh_generation",
+      "case_id": "real_dicom_check_001_anon_T1",
+      "message": "Dry-run mode: tool was not executed.",
+      "parsed_stdout": {},
+      "blockers": []
+    },
+    "AGENT_10_FEBIO_MODEL_GENERATION": {
+      "success": true,
+      "dry_run": true,
+      "agent_id": "AGENT_10_FEBIO_MODEL_GENERATION",
+      "tool_name": "agent10_febio_model_generation",
+      "case_id": "real_dicom_check_001_anon_T1",
+      "message": "Dry-run mode: tool was not executed.",
+      "parsed_stdout": {},
+      "blockers": []
+    },
+    "AGENT_11_BOUNDARY_LOAD_CONFIGURATION": {
+      "success": true,
+      "dry_run": true,
+      "agent_id": "AGENT_11_BOUNDARY_LOAD_CONFIGURATION",
+      "tool_name": "agent11_boundary_load_configuration",
+      "case_id": "real_dicom_check_001_anon_T1",
+      "message": "Dry-run mode: tool was not executed.",
+      "parsed_stdout": {},
+      "blockers": []
+    },
+    "AGENT_11_REVIEW_VALIDATION": {
+      "success": true,
+      "dry_run": true,
+      "agent_id": "AGENT_11_REVIEW_VALIDATION",
+      "tool_name": "agent11_review_validation",
+      "case_id": "real_dicom_check_001_anon_T1",
+      "message": "Dry-run mode: tool was not executed.",
+      "parsed_stdout": {},
+      "blockers": []
+    },
+    "AGENT_12_FEBIO_SOLVER_EXECUTION": {
+      "success": true,
+      "dry_run": true,
+      "agent_id": "AGENT_12_FEBIO_SOLVER_EXECUTION",
+      "tool_name": "agent12_febio_solver_execution",
+      "case_id": "real_dicom_check_001_anon_T1",
+      "message": "Dry-run mode: tool was not executed.",
+      "parsed_stdout": {},
+      "blockers": []
+    },
+    "AGENT_13_SOLVER_RESULT_VALIDATION": {
+      "success": true,
+      "dry_run": true,
+      "agent_id": "AGENT_13_SOLVER_RESULT_VALIDATION",
+      "tool_name": "agent13_solver_result_validation",
+      "case_id": "real_dicom_check_001_anon_T1",
+      "message": "Dry-run mode: tool was not executed.",
+      "parsed_stdout": {},
+      "blockers": []
+    },
+    "AGENT_14_RESULT_EXTRACTION": {
+      "success": true,
+      "dry_run": true,
+      "agent_id": "AGENT_14_RESULT_EXTRACTION",
+      "tool_name": "agent14_result_extraction",
+      "case_id": "real_dicom_check_001_anon_T1",
+      "message": "Dry-run mode: tool was not executed.",
+      "parsed_stdout": {},
+      "blockers": []
+    },
+    "AGENT_15_RESULT_INTERPRETATION_PRECHECK": {
+      "success": true,
+      "dry_run": true,
+      "agent_id": "AGENT_15_RESULT_INTERPRETATION_PRECHECK",
+      "tool_name": "agent15_result_interpretation_precheck",
+      "case_id": "real_dicom_check_001_anon_T1",
+      "message": "Dry-run mode: tool was not executed.",
+      "parsed_stdout": {},
+      "blockers": []
+    },
+    "AGENT_16_ACADEMIC_REPORT_DRAFT": {
+      "success": true,
+      "dry_run": true,
+      "agent_id": "AGENT_16_ACADEMIC_REPORT_DRAFT",
+      "tool_name": "agent16_academic_report_draft",
+      "case_id": "real_dicom_check_001_anon_T1",
+      "message": "Dry-run mode: tool was not executed.",
+      "parsed_stdout": {},
+      "blockers": []
+    },
+    "AGENT_17_FULL_PIPELINE_AUDIT": {
+      "success": true,
+      "dry_run": true,
+      "agent_id": "AGENT_17_FULL_PIPELINE_AUDIT",
+      "tool_name": "agent17_full_pipeline_audit",
+      "case_id": "real_dicom_check_001_anon_T1",
+      "message": "Dry-run mode: tool was not executed.",
+      "parsed_stdout": {},
+      "blockers": []
+    },
+    "CLEAN_T1_UPSTREAM_EVIDENCE_AUDIT": {
+      "success": true,
+      "dry_run": true,
+      "agent_id": "CLEAN_T1_UPSTREAM_EVIDENCE_AUDIT",
+      "tool_name": "clean_t1_upstream_evidence_audit",
+      "case_id": "real_dicom_check_001_anon_T1",
+      "message": "Dry-run mode: tool was not executed.",
+      "parsed_stdout": {},
+      "blockers": []
+    }
+  },
+  "blockers": [],
+  "warnings": [],
+  "quantitative_field_interpretation_allowed": false,
+  "clinical_interpretation_allowed": false,
+  "limited_pass": false,
+  "final_status": "LANGGRAPH_PIPELINE_DRY_RUN_PASS",
+  "next_stage": "STREAMLIT_INTERFACE_PREP"
+}

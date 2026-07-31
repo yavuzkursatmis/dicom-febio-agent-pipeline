@@ -1,0 +1,25 @@
+﻿PROJE AMACI
+AI ajanlı, akademik-validasyon odaklı, literatür destekli biyomekanik analiz sistemi geliştirmek.
+
+ANA AKIŞ
+Veri yükleme
+→ güvenlik kontrolü
+→ görüntü kalite kontrolü
+→ hedef anlama
+→ segmentasyon
+→ segmentasyon validasyonu
+→ literatür destekli malzeme seçimi
+→ insan onayı
+→ geometri
+→ mesh
+→ FEBio modeli
+→ solver
+→ sonuç validasyonu
+→ belirsizlik analizi
+→ akademik rapor
+→ final karar
+
+NOT
+Tüm araçlar ücretsiz/açık kaynak olmalı.
+LLM bağlantısı Gemini API üzerinden yapılacak.
+Proje sonunda akademik makale raporu hazırlanacak.

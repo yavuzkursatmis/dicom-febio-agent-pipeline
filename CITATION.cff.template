@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Please cite this software and the associated methods publication."
+title: "Human-in-the-Loop Agent Workflow from CT/DICOM to FEBio"
+type: software
+version: "1.0.0-publication"
+authors:
+  - family-names: "AUTHOR_TO_COMPLETE"
+    given-names: "AUTHOR_TO_COMPLETE"
+repository-code: "GITHUB_URL_TO_COMPLETE"
+doi: "ZENODO_DOI_TO_COMPLETE"
+license: "Apache-2.0"
+

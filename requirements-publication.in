@@ -1,0 +1,14 @@
+# Exact versions will be frozen from the validated environment before release.
+pydantic
+langchain-core
+langgraph
+numpy
+SimpleITK
+pydicom
+meshio
+requests
+pypdf
+python-dotenv
+scikit-image
+trimesh
+TotalSegmentator
