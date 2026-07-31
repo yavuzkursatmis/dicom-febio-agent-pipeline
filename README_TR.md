@@ -40,6 +40,11 @@ Repository şu iddiaları destekler:
 - doğrulanmış uzamsal gerilme, gerinim ve yer değiştirme alan yorumu;
 - sınırsız tam otonom kullanım.
 
+Doğrulanmış solver çalışması, sınır koşulları, düğüm sayıları ve yorumlama
+sınırları
+[`docs/PUBLICATION_CLAIM_EVIDENCE.md`](docs/PUBLICATION_CLAIM_EVIDENCE.md)
+dosyasında kayıtlıdır.
+
 ## Üst düzey akış
 
 ```text

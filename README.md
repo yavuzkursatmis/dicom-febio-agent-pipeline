@@ -42,6 +42,10 @@ It does not establish:
 - validated spatial stress/strain/displacement field interpretation;
 - unrestricted autonomous operation.
 
+Validated solver execution, boundary conditions, node counts, and
+interpretation limits are documented in
+[`docs/PUBLICATION_CLAIM_EVIDENCE.md`](docs/PUBLICATION_CLAIM_EVIDENCE.md).
+
 ## High-level workflow
 
 ```text
