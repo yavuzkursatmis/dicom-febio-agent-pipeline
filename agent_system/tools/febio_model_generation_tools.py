@@ -567,15 +567,24 @@ def run_febio_model_generation(user_input: FebioModelGenerationInput):
         if not policy.get("approved"):
             blockers.append("RAW_NON_POSITIVE_DENSITY_FOUND_AND_NO_APPROVED_MAPPING_POLICY")
         else:
-            expected_count = int(candidate.get("invalid_density_count", -1))
-            if expected_count != raw_invalid_density_count:
+                        # The upstream policy count can be computed in the masked-voxel
+            # domain, whereas raw_invalid_density_count is computed at
+            # tetrahedral element centroids. Preserve both counts as
+            # provenance; do not compare different sampling domains.
+            policy_reference_count = int(
+                candidate.get("invalid_density_count", -1)
+            )
+
+            if policy_reference_count >= 0:
                 warnings.append(
-                    f"MAPPING_POLICY_INVALID_COUNT_MISMATCH:{expected_count}_vs_{raw_invalid_density_count}"
+                    "APPROVED_DENSITY_POLICY_REFERENCE_INVALID_COUNT:"
+                    f"{policy_reference_count}"
                 )
-            else:
-                warnings.append(
-                    f"APPROVED_DENSITY_DOMAIN_POLICY_APPLIED_TO_ELEMENTS:{raw_invalid_density_count}"
-                )
+
+            warnings.append(
+                "APPROVED_DENSITY_DOMAIN_POLICY_APPLIED_TO_ELEMENT_CENTROIDS:"
+                f"{raw_invalid_density_count}"
+            )
 
     if np.any(values["density"] <= 0):
         blockers.append("NON_POSITIVE_EFFECTIVE_DENSITY_COMPUTED_FOR_SOME_ELEMENTS")
