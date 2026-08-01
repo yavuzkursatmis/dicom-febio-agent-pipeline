@@ -163,3 +163,26 @@ The band thickness was calculated as:
 
 ```text
 0.08 * 45.0 mm = 3.6 mm
+
+## FEBio solver-execution and output evidence
+
+The active clean-T1 solver-ready FEBio model was executed using the recorded
+FEBio 4 executable after approval of the boundary/load human-review gate.
+
+### Solver-execution status
+
+| Parameter | Verified value |
+|---|---:|
+| Solver execution status | `SOLVER_EXECUTION_PASS` |
+| Solver run attempted | Yes |
+| Solver run success | Yes |
+| Solver process return code | 0 |
+| Normal termination detected | Yes |
+| Solver error detected | No |
+| Execution warnings | None |
+| Execution blockers | None |
+
+The FEBio solver log ends with:
+
+```text
+N O R M A L   T E R M I N A T I O N
