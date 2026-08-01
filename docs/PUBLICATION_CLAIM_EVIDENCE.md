@@ -141,3 +141,25 @@ The implemented validation evaluated the following determinant condition:
 - nu_xz * nu_zx
 - 2 * nu_yx * nu_zy * nu_xz
 > 0
+
+## Boundary-condition and loading evidence
+
+The active clean-T1 case used a protocol-derived axial-compression
+configuration with coordinate-based inferior and superior end regions.
+
+### Geometric selection parameters
+
+| Parameter | Verified value |
+|---|---:|
+| Minimum model Z coordinate | 78.25 mm |
+| Maximum model Z coordinate | 123.25 mm |
+| Model height | 45.0 mm |
+| End-region band fraction | 0.08 |
+| End-region band thickness | 3.6 mm |
+| Inferior selection threshold | Z <= 81.85 mm |
+| Superior selection threshold | Z >= 119.65 mm |
+
+The band thickness was calculated as:
+
+```text
+0.08 * 45.0 mm = 3.6 mm
