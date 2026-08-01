@@ -71,3 +71,54 @@ biomechanical validity.
 
 The watertight-surface result is recorded as a geometry-processing check only.
 It must not be interpreted as proof of anatomical correctness.
+
+## Material-law and element-mapping evidence
+
+The validated material package records a density-based orthotropic linear
+elastic bone law derived from the following source:
+
+> A novel personalized homogenous finite element model to predict the pull-out
+> strength of cancellous bone screws. DOI: 10.1186/s13018-024-05169-x.
+
+### Recorded constitutive relations
+
+| Parameter | Recorded relation |
+|---|---|
+| Apparent density | `rho_app = 0.047 + 0.001122 HU` g/cm3 |
+| Longitudinal elastic modulus | `Ez = 4730 rho_app^1.56` MPa |
+| Transverse elastic moduli | `Ex = Ey = 0.333 Ez` |
+| In-plane shear modulus | `Gxy = 0.121 Ez` |
+| Remaining shear moduli | `Gxz = Gyz = 0.157 Ez` |
+| Poisson ratio | `nu_xy = 0.381` |
+| Remaining Poisson ratios | `nu_xz = nu_yz = 0.104` |
+
+The material package records that no manual material coefficients or equations
+were entered. The structured coefficients originate from the approved
+agent-derived source record.
+
+### Element-level material assignment
+
+| Parameter | Verified value |
+|---|---:|
+| Material-bin count | 20 |
+| Tetrahedral element count | 456957 |
+| Elements with a material assignment | 456957 |
+| Element-centroid HU minimum | -773 |
+| Element-centroid HU maximum | 1445 |
+| Element-centroid HU mean | 294.417439715334 |
+| Effective density minimum | 0.000998 g/cm3 |
+| Effective density maximum | 1.66829 g/cm3 |
+| Element-level Ez minimum | 0.09851555 MPa |
+| Element-level Ez maximum | 10510.04930466 MPa |
+
+The sum of the element counts in the 20 material bins equals the complete
+tetrahedral element count. No unassigned tetrahedral element was identified.
+
+### Density-domain mapping policy
+
+The HU-density relation produced non-positive raw density values for part of
+the sampled domain. A human-reviewed, case-derived policy clipped these values
+to the minimum positive case-derived density:
+
+```text
+effective density floor = 0.000998 g/cm3
