@@ -122,3 +122,22 @@ to the minimum positive case-derived density:
 
 ```text
 effective density floor = 0.000998 g/cm3
+
+### Orthotropic-stability evidence
+
+The material-law validation was not stored in a separately named
+orthotropic-stability file. Instead, the explicit stability results are
+contained in:
+
+- `APPROVED_MATERIAL_LAW_VALIDATION_RESULT.json`;
+- `APPROVED_MATERIAL_LAW_VALIDATION_REPORT.csv`.
+
+The implemented validation evaluated the following determinant condition:
+
+```text
+1
+- nu_xy * nu_yx
+- nu_yz * nu_zy
+- nu_xz * nu_zx
+- 2 * nu_yx * nu_zy * nu_xz
+> 0
