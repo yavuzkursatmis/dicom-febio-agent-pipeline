@@ -96,15 +96,70 @@ def choose_solver_log(log_files):
 
 
 def parse_solver_log(log_text: str):
+    import re
+
     lower = log_text.lower()
     lines = log_text.splitlines()
 
+    def last_summary_int(pattern: str, fallback: int) -> int:
+        matches = re.findall(
+            pattern,
+            log_text,
+            flags=re.IGNORECASE | re.MULTILINE,
+        )
+        return int(matches[-1]) if matches else fallback
+
+    normal_termination_detected = bool(
+        re.search(
+            (
+                r"N\s*O\s*R\s*M\s*A\s*L"
+                r"\s+T\s*E\s*R\s*M\s*I\s*N\s*A\s*T\s*I\s*O\s*N"
+            ),
+            log_text,
+            flags=re.IGNORECASE,
+        )
+    ) or "normal termination" in lower
+
+    time_step_fallback = len(
+        re.findall(
+            r"^\s*=+\s*beginning time step\b",
+            log_text,
+            flags=re.IGNORECASE | re.MULTILINE,
+        )
+    )
+
+    time_step_count = last_summary_int(
+        r"Number of time steps completed\s*\.*\s*:\s*(\d+)",
+        time_step_fallback,
+    )
+
+    convergence_count = len(
+        re.findall(
+            r"^\s*-+\s*converged at time\s*:",
+            log_text,
+            flags=re.IGNORECASE | re.MULTILINE,
+        )
+    )
+
+    reformation_fallback = len(
+        re.findall(
+            r"^\s*Reforming stiffness matrix:\s*reformation\s*#\d+",
+            log_text,
+            flags=re.IGNORECASE | re.MULTILINE,
+        )
+    )
+
+    stiffness_reformation_count = last_summary_int(
+        r"Total number of stiffness reformations\s*\.*\s*:\s*(\d+)",
+        reformation_fallback,
+    )
+
     metrics = {
-        "normal_termination_detected": "normal termination" in lower,
+        "normal_termination_detected": normal_termination_detected,
         "line_count": len(lines),
-        "time_step_count": lower.count("time step"),
-        "convergence_count": lower.count("convergence"),
-        "stiffness_reformation_count": lower.count("stiffness reformation"),
+        "time_step_count": time_step_count,
+        "convergence_count": convergence_count,
+        "stiffness_reformation_count": stiffness_reformation_count,
         "fatal_error_count": lower.count("fatal error"),
         "error_count": lower.count("error"),
         "warning_count": lower.count("warning"),
