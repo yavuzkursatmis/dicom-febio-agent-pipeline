@@ -223,3 +223,15 @@ The recorded XPLT file size was:
 
 ```text
 171213357 bytes
+
+## Solver-log parser correction provenance
+
+A source-code audit identified a limitation in the historical Agent14
+solver-log metric parser.
+
+The historical parser used simple text-occurrence counts:
+
+```python
+"normal_termination_detected": "normal termination" in lower
+"time_step_count": lower.count("time step")
+"stiffness_reformation_count": lower.count("stiffness reformation")
