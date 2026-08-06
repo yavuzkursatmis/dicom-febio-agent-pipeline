@@ -186,3 +186,40 @@ The FEBio solver log ends with:
 
 ```text
 N O R M A L   T E R M I N A T I O N
+
+## Downstream reporting and LangGraph orchestration evidence
+
+### Downstream agent statuses
+
+The active clean-T1 downstream workflow recorded the following statuses:
+
+| Agent | Function | Recorded status |
+|---|---|---|
+| Agent14 | Result extraction | `RESULT_EXTRACTION_PASS` |
+| Agent15 | Interpretation precheck | `INTERPRETATION_PRECHECK_LIMITED_PASS` |
+| Agent16 | Academic report draft | `ACADEMIC_REPORT_DRAFT_PASS` |
+| Agent17 | Full pipeline audit | `FULL_PIPELINE_AUDIT_LIMITED_PASS` |
+
+The directory numbering is shifted relative to the agent identifiers:
+
+| Directory | Agent |
+|---|---|
+| `15_result_extraction` | Agent14 |
+| `16_result_interpretation_precheck` | Agent15 |
+| `17_academic_report_draft` | Agent16 |
+| `18_full_pipeline_audit` | Agent17 |
+
+### Result-extraction boundary
+
+Agent14 verified:
+
+- successful upstream solver validation;
+- normal solver termination;
+- existence of a non-empty XPLT file;
+- existence of the selected solver log;
+- availability of solver-log text metrics.
+
+The recorded XPLT file size was:
+
+```text
+171213357 bytes
